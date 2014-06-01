@@ -9,7 +9,7 @@
 #import "APIClient.h"
 
 static NSString* const APIBaseUrl = @"http://www.kanjian.com";
-static NSString* const APIBaseUrlForMusicianList = @"http://t-test-public.qiniudn.com";
+static NSString* const APIBaseUrlForMusicianList = @"http://121.199.14.83:8080";
 
 @implementation APIClient
 
