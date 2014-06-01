@@ -16,7 +16,6 @@
 - (NSURLSessionDataTask *)loadMusicians:(void (^)(NSError *))block {
     NSString *api = @"/kanjian/musicians.json";
     return [[APIClient sharedClientForMusicianList] GET:api parameters:nil success:^(NSURLSessionDataTask * __unused task, id JSON){
-        NSLog(@"success");
         NSArray *musiciansFromResponce = [JSON valueForKeyPath:@"musicians"];
         NSMutableArray *mutableMusicians = [NSMutableArray arrayWithCapacity:[musiciansFromResponce count]];
         for (NSDictionary *attrs in musiciansFromResponce) {
@@ -32,7 +31,6 @@
             block(nil);
         }
     } failure:^(NSURLSessionDataTask * __unused task, NSError *error){
-        NSLog(@"fail");
         if (block) {
             block(error);
         }
