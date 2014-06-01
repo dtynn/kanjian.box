@@ -115,7 +115,6 @@
     cell.textLabel.text = musician.name;
     cell.detailTextLabel.text = musician.styles;
     NSURL *avatartUrl = [NSURL URLWithString:musician.avatarUrl];
-    NSLog(@"%@", musician.avatarUrl);
     [cell.imageView setImageWithURL:avatartUrl placeholderImage:[UIImage imageNamed:@"kanjianfm"]];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     return cell;
